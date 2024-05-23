@@ -12,7 +12,7 @@ app.use(cookieParser());
 app.use(cors());
 app.use('/api', router);
 
-const PORT = process.env.PORT || 5100;
+const PORT = process.env.PORT || 5101;
 
 const start = async () => {
     try {
@@ -28,4 +28,3 @@ const start = async () => {
 };
 
 start();
-// ds
