@@ -4,11 +4,13 @@ const cors = require('cors');
 const cookieParser = require('cookie-parser');
 
 const mongoose = require('mongoose');
+const router = require('./router/index');
 
 const app = express();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors());
+app.use('/api', router);
 
 const PORT = process.env.PORT || 5100;
 
