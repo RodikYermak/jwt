@@ -1,9 +1,12 @@
 import React from 'react';
+import LoginForm from './components/LoginForm';
 
 function App() {
-  return (
-    <h1>1233</h1>
-  );
+    return (
+        <>
+            <LoginForm />
+        </>
+    );
 }
 
 export default App;
