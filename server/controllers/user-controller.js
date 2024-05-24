@@ -12,7 +12,7 @@ class UserController {
 
             return res.json(userData);
         } catch (e) {
-            console.log(e);
+            next(e);
         }
     }
 
@@ -23,7 +23,9 @@ class UserController {
 
     async logout(req, res, next) {
         try {
-        } catch (e) {}
+        } catch (e) {
+            next(e);
+        }
     }
 
     async activate(req, res, next) {
@@ -32,7 +34,7 @@ class UserController {
             await userService.activate(activationLink);
             return res.redirect(process.env.CLIENT_URL);
         } catch (e) {
-            console.log(e);
+            next(e);
         }
     }
 
@@ -45,9 +47,10 @@ class UserController {
         try {
             res.json(['123', '456']);
             console.log('server');
-        } catch (e) {}
+        } catch (e) {
+            next(e);
+        }
     }
 }
 
 module.exports = new UserController();
-// 36:47
