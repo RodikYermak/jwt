@@ -17,4 +17,8 @@ export default class AuthService {
     static async logout(): Promise<void> {
         return $api.post('/logout');
     }
+
+    static async checkAuth(): Promise<AxiosResponse<AuthResponse>> {
+        return $api.get<AuthResponse>('/auth');
+    }
 }
