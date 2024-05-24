@@ -1,7 +1,9 @@
-import React, { FC } from 'react';
+import React from 'react';
 
-const App: FC = () => {
-    return <div>123</div>;
-};
+function App() {
+  return (
+    <h1>1233</h1>
+  );
+}
 
 export default App;
